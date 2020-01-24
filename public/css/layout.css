@@ -52,7 +52,7 @@ header .banner {
    vertical-align: middle;
    margin: 0 auto;
    width: 85%;
-   padding-bottom: 30px;s
+   padding-bottom: 30px;
    text-align: center;
 }
 
@@ -94,8 +94,8 @@ header .social li {
    margin: 0 15px;
    padding: 0;
 }
-header .social li a { color: #fff; }
-header .social li a:hover { color: #11ABB0; }
+header .social li a { color: gray; }
+header .social li a:hover { color: white; }
 
 /* scrolldown link */
 header .scrolldown a {
@@ -125,7 +125,7 @@ header .scrolldown a:hover { color: #11ABB0; }
 	 margin: 0;
 	 padding: 0;
 	 border: none;
-	 outline: none;
+    outline: none;
 }
 
 /* nav-wrap */
@@ -139,7 +139,22 @@ header .scrolldown a:hover { color: #11ABB0; }
    position: fixed;
    left: 0;
    top: 0;
+   background-color: black;
+
 }
+.navbar{
+   background-color:"white";
+   font: 12px 'opensans-bold', sans-serif;
+   width: 100%;
+   text-transform: uppercase;
+   letter-spacing: 2.5px;
+   margin: 0 auto;
+   z-index: 100;
+   position: fixed;
+   left: 0;
+   top: 0;
+}
+#nav-wrap 
 .opaque { background-color: #333; }
 
 /* hide toggle button */
@@ -169,7 +184,7 @@ ul#nav li a {
    line-height: 32px;
 	text-decoration: none;
    text-align: left;
-   color: #fff;
+   color: lightslategrey;
 
 	-webkit-transition: color .2s ease-in-out;
 	-moz-transition: color .2s ease-in-out;
@@ -177,8 +192,10 @@ ul#nav li a {
 	-ms-transition: color .2s ease-in-out;
 	transition: color .2s ease-in-out;
 }
-
-ul#nav li a:active { background-color: transparent !important; }
+ul#nav li a:hover{
+   color:red
+}
+ul#nav li a:active{ color: white !important; }
 ul#nav li.current a { color: #F06000; }
 
 
