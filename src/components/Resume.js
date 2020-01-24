@@ -5,7 +5,7 @@ export default  class Resume extends Component {
     return (
       <section id="resume">
 
-         <div className="row education">
+         {/* <div className="row education">
 
             <div className="three columns header-col">
                <h1><span>Education</span></h1>
@@ -30,7 +30,7 @@ export default  class Resume extends Component {
                 })
               }
             </div>
-         </div>
+         </div> */}
         <div className="row work">
             <div className="three columns header-col">
                <h1><span>Work</span></h1>
@@ -47,7 +47,9 @@ export default  class Resume extends Component {
                           {item.specialization}
                           <span>&bull;</span> <em className="date">{item.MonthOfLeaving} {item.YearOfLeaving}</em></p>
                           <p>
-                          {item.Achievements}
+                            •	Scan outgoing and incoming laptops in ServiceNow <br/>
+                            •	Organize computer area & repair printer malfunction <br/>
+                            •	In charge of receiving phone calls & assisting with personal computer problems
                           </p>
                        </div>
 
@@ -72,19 +74,26 @@ export default  class Resume extends Component {
                {resumeData.skillsDescription}
                </p>
 
-   				<div className="bars">
+   				<div id ="skills">
 
-   				   <ul className="skills">
-                {
+   				   <ul className="heading">
+                {/* {
                   resumeData.skills && resumeData.skills.map((item) => {
                     return(
                       <li>
-                      <span className={`bar-expand ${item.skillname.toLowerCase()}`}>
-                      </span><em>{item.skillname}</em>
+                        Java
                       </li>
                     )
                   })
-                }
+                } */}
+                <li>Java</li>
+                <li>JavaScript</li>
+                <li>Node.js</li>
+                <li>React.js</li>
+                <li>Python</li>
+                <li>PHP</li>
+                <li>HTML5</li>
+                <li>CSS3</li>
 
    					</ul>
 
