@@ -1,7 +1,7 @@
 Hey come checkout my Web Portfolio!!
 
 ## Preview
-![Preview](previewPortfolio.jpg)
+![Preview](previewPortfolioPicture.png)
 
 
 ## Details
