@@ -21,10 +21,10 @@ export default class Porfolio extends Component {
                               <h4 style={{color:"white"}}>{item.name}</h4>
                               <h5>{item.title}</h5>
                               <div style={{padding:"10px"}}>
-                                <a href = "https://google.com" target = "blank"><button>View Demo</button></a>
+                                <a href = {item.demo} target = "blank"><button>View Demo</button></a>
                               </div>
                               <div style={{padding:"10px"}}>
-                                <a href = "https://google.com" target = "blank"><button>View Code</button></a>
+                                <a href = {item.githubLink} target = "blank"><button>View Code</button></a>
                               </div>
                             </div>
                           </div>

@@ -1,8 +1,11 @@
 Hey come checkout my Web Portfolio!!
 
 ## Preview
-![Preview](https://image.ibb.co/e5uBf0/Capture.png)
+![Preview](previewPortfolio.jpg)
 
+
+## Details
+This web portfolio is still a work in progress because I would love to fix up some styling issues and make it look better. I also need to add in more of my own personal projects that I need to finish up and deploy. 
 ## Demo
-Will be coming soon
+Will be Coming Soon
 
