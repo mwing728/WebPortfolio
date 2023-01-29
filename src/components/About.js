@@ -27,7 +27,7 @@ export default class About extends Component {
 
                   <h2>Contact Details</h2>
                   <p className="address">
-       						<span style={{fontSize:"20px"}}>mattdwing@gmail.com</span>
+       						<span style={{fontSize:"20px"}}><a href='mailto:mattdwing@gmail.com'>mattdwing@gmail.com </a></span>
                     <br></br>
                   </p>
                   </div>

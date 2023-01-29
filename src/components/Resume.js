@@ -42,15 +42,18 @@ export default  class Resume extends Component {
                   return(
                     <div className="row item">
                        <div className="twelve columns">
-                          <h3>{item.CompanyName}</h3>
+                          <div style={{display: "inline-flex"}}>
+                              <h3 className="companyNameAndLogo">{item.CompanyName}</h3>
+                              <img style={{width: '50px', height: '50px'}}src={item.CompanyLogo} />
+                          </div>
                           <p className="info">
                           {item.specialization}
-                          <span>&bull;</span> <em className="date">{item.MonthOfLeaving} {item.YearOfLeaving}</em></p>
-                          <p>
-                            •	Scan outgoing and incoming laptops in ServiceNow <br/>
-                            •	Organize computer area & repair printer malfunction <br/>
-                            •	In charge of receiving phone calls & assisting with personal computer problems
-                          </p>
+                          <span>&bull;</span> <em className="date">{item.MonthStarted} {item.YearOfLeaving}</em></p>
+                          {item.Achievements.map((achievement) => {
+                              return (
+                                <li>{achievement}</li>
+                              )
+                          })}
                        </div>
 
                     </div>
@@ -77,23 +80,15 @@ export default  class Resume extends Component {
    				<div id ="skills">
 
    				   <ul className="heading">
-                {/* {
+                {
                   resumeData.skills && resumeData.skills.map((item) => {
                     return(
                       <li>
-                        Java
+                        {item}
                       </li>
                     )
                   })
-                } */}
-                <li>Java</li>
-                <li>JavaScript</li>
-                <li>Node.js</li>
-                <li>React.js</li>
-                <li>Python</li>
-                <li>PHP</li>
-                <li>HTML5</li>
-                <li>CSS3</li>
+                }
 
    					</ul>
 

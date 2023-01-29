@@ -2,7 +2,8 @@ let resumeData = {
     // "imagebaseurl":"https://rbhatia46.github.io/",
     "name": "Matthew Wing",
     "linkedinId":"Your LinkedIn Id",
-    "roleDescription": "I am a recent college graduate passionate about coding and learning new technologies.",
+    "skills": ["Javascript", "PHP", "HTML5", "CSS3", "Linux", "jQuery", "MySQL"],
+    "roleDescription": "Passionate Software Developer Eager To Learn New Technologies",
     "socialLinks":[
         {
           "name":"linkedin",
@@ -15,15 +16,17 @@ let resumeData = {
           "className":"fa fa-github"
         },
       ],
-    "aboutme":" My name is Matthew Wing. I am a determined recent graduate eager to help build applications using Java, PHP, Node.js, React.js. Experienced working with other members on team projects. Experienced using IDE tools in the Windows and Linux environment. Pursuing to become a Full Stack Software Developer in Node.js and React.js. Receiving tips and advice from mentors has helped myself to write more clean code. ",
+    "aboutme":" Enthusiastic software developer motivated to build applications using PHP, JavaScript, and MySQL.  Determined to learn new languages to improve my skills and increase my knowledge in the software development field. Receiving tips and advice from mentors has helped myself to write more clean code.",
     "website":"https://rbhatia46.github.io",
     "work":[
       {
-        "CompanyName":"Montclair State University Department of Information Technology",
-        "specialization":"I.T. Lab Assistant",
-        "MonthOfLeaving":"Apr 2018 - ",
-        "YearOfLeaving":"Dec 2019",
-        "Achievements":"•	Scan outgoing and incoming laptops in ServiceNow Organize computer area & repair printer malfunction In charge of receiving phone calls & assisting with personal computer problems",      },
+        "CompanyName":"Lawyer.com",
+        "CompanyLogo": "images/lawyercom-logo.jfif",
+        "specialization":"Full Stack Developer",
+        "MonthStarted":"Feb 2020 - ",
+        "YearOfLeaving":"Present",
+        "Achievements": ["Maintain the business Softphone Platform through Javascript and PHP", "Use Twilio API (PHP/Javascript) to connect our Sales Representatives to Consumers and Lawyers.", "Support the platform using Pusher API to receive real time updates/notifications", "Build/Debug code on the LAMP stack (Linux, Apache, MySQL, PHP)"]
+      },
     ],
     "portfolio":[
       {
