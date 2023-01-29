@@ -18,7 +18,7 @@
   "bugs": {
     "url": "https://github.com/mwing728/WebPortfolio/issues"
   },
-  "homepage": "https://github.com/mwing728/WebPortfolio#readme",
+  "homepage": "https://MatthewWing.com",
   "browserslist": [
     ">0.2%",
     "not dead",
@@ -28,6 +28,9 @@
   "dependencies": {
     "react": "^16.6.0",
     "react-dom": "^16.6.0",
-    "react-scripts": "2.1.1"
+    "react-scripts": "^5.0.1"
+  },
+  "devDependencies": {
+    "gh-pages": "^5.0.0"
   }
 }
