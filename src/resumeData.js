@@ -16,7 +16,7 @@ let resumeData = {
         "className":"fa fa-github"
       },
     ],
-  "aboutme":" Enthusiastic software developer motivated to build applications using PHP, JavaScript, and MySQL.  Determined to learn new languages to improve my skills and increase my knowledge in the software development field. Receiving tips and advice from mentors has helped myself to write more clean code.<br> Actively relearning Python and React to broaden my skill set and deepen my expertise.",
+  "aboutme":" Enthusiastic software developer motivated to build applications using PHP, JavaScript, and MySQL.  Determined to learn new languages to improve my skills and increase my knowledge in the software development field. Receiving tips and advice from mentors has helped myself to write more clean code. \n Actively relearning Python and React to broaden my skill set and deepen my expertise.",
   "website":"https://rbhatia46.github.io",
   "work":[
     {
