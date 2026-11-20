@@ -1,47 +1,53 @@
 import React, { Component } from 'react';
-export default class Porfolio extends Component {
+
+export default class Portfolio extends Component {
   render() {
     let resumeData = this.props.resumeData;
     return (
-      <section id="portfolio">
-      <div className="row" style={{width:"100%"}}>
-        <div className="twelve columns collapsed">
-          <h1>Check Out Some of My Projects.</h1>
-          <div id="portfolio-wrapper" className="bgrid-quarters s-bgrid-thirds cf" >
-          {
-            resumeData.portfolio && resumeData.portfolio.map((item)=>{
-              return(
-
-                <div>
-                  <div className="columns portfolio-item"style={{width: "25%"}}>
-                    <div className="item-wrap">
-                          <img src={`${item.imgurl}`} className="item-img"/>
-                          <div className="overlay"> 
-                            <div className="portfolio-item-meta" style={{padding:"80px"}}>
-                              <h4 style={{color:"white"}}>{item.name}</h4>
-                              <h5>{item.title}</h5>
-                              <div style={{padding:"10px"}}>
-                                <a href = {item.demo} target = "blank"><button>View Demo</button></a>
-                              </div>
-                              <div style={{padding:"10px"}}>
-                                <a href = {item.githubLink} target = "blank"><button>View Code</button></a>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <p>{item.description}</p>
+      <section id="projects" className="section">
+        <div className="wrap">
+          <p className="eyebrow">Projects</p>
+          <h2>Selected work</h2>
+          <div className="project-grid">
+            {
+              resumeData.portfolio && resumeData.portfolio.map(function (item) {
+                var parts = item.name.split(' ').filter(Boolean);
+                var mark = parts.length > 1
+                  ? (parts[0].charAt(0) + parts[1].charAt(0)).toUpperCase()
+                  : item.name.slice(0, 2).toUpperCase();
+                return (
+                  <article className="card project-card" key={item.name}>
+                    <div className="project-mark">
+                      {item.logo ? (
+                        <img className="project-logo" src={item.logo} alt="" />
+                      ) : (
+                        <span aria-hidden="true">{mark}</span>
+                      )}
+                      {item.tags ? (
+                        <ul className="chips project-tags">
+                          {item.tags.map(function (tag) {
+                            return <li key={tag}>{tag}</li>;
+                          })}
+                        </ul>
+                      ) : null}
+                    </div>
+                    <div className="project-body">
+                      <h3>{item.name}</h3>
+                      <p>{item.description}</p>
+                      <div className="project-links">
+                        <a href={item.demo} target="_blank" rel="noopener noreferrer">View demo</a>
+                        {item.githubLink ? (
+                          <a href={item.githubLink} target="_blank" rel="noopener noreferrer">View code</a>
+                        ) : null}
                       </div>
-                    <div>
-                  </div>
-                </div>
-                  
-              )
-            })
-          }
+                    </div>
+                  </article>
+                );
+              })
+            }
           </div>
         </div>
-      </div>
-  </section>
-        );
+      </section>
+    );
   }
 }

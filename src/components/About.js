@@ -1,39 +1,27 @@
 import React, { Component } from 'react';
+
 export default class About extends Component {
   render() {
     let resumeData = this.props.resumeData;
     return (
-      <section id="about" >
-         <div className="row">
-
-            <div className="three columns">
-
-               <img src="images/happy-matt.jpg" alt="" width="400" height="400"/>
-
+      <section id="about" className="section">
+        <div className="wrap">
+          <div className="about-grid">
+            <div>
+              <p className="eyebrow">About</p>
+              <h2>About me</h2>
+              <p className="prose">{resumeData.aboutme}</p>
             </div>
-
-            <div className="nine columns main-col">
-
-               <h2>About Me</h2>
-               <p style={{fontSize: "20px"}}>
-               {
-                 resumeData.aboutme
-               }
-               </p>
-
-               <div className="row">
-
-                  <div className="columns contact-details">
-
-                  <h2>Contact Details</h2>
-                  <p className="address">
-       						<span style={{fontSize:"20px"}}><a href='mailto:mattdwing@gmail.com'>mattdwing@gmail.com </a></span>
-                    <br></br>
-                  </p>
-                  </div>
-               </div>
-            </div>
-         </div>
+            <aside className="card focus-card">
+              <h3>Focus</h3>
+              <ul>
+                <li>Applications in PHP, JavaScript, and MySQL</li>
+                <li>Cleaner code, with help from mentors</li>
+                <li>Python and React, in progress</li>
+              </ul>
+            </aside>
+          </div>
+        </div>
       </section>
     );
   }

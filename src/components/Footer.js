@@ -1,29 +1,16 @@
 import React, { Component } from 'react';
+
 export default class Footer extends Component {
   render() {
     let resumeData = this.props.resumeData;
     return (
-      <footer style={{color:"gray"}}>
-      <div className="">
-        <div className="">
-          <ul className="social-links" >
-            {
-              resumeData.socialLinks && resumeData.socialLinks.map((item)=>{
-                return(
-                  <li>
-                    <a href={item.url} target="blank"><i className={item.className}></i></a>
-                  </li>
-                )
-              })
-            }
-          </ul>
-          
+      <footer className="site-footer">
+        <div className="wrap footer-inner">
+          <p>{resumeData.name}</p>
+          <p>© {new Date().getFullYear()}</p>
+          <a href="#top">Back to top</a>
         </div>
-        Copyright &copy;Matthew Wing 2020
-        <div id="go-top"><a className="smoothscroll" title="Back to Top" href="#home"><i className="icon-up-open" /></a></div>
-      </div>
-    </footer>
-    
+      </footer>
     );
   }
 }

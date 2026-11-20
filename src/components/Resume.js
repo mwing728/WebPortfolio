@@ -1,103 +1,52 @@
 import React, { Component } from 'react';
-export default  class Resume extends Component {
+
+export default class Resume extends Component {
   render() {
     let resumeData = this.props.resumeData;
     return (
-      <section id="resume">
-
-         {/* <div className="row education">
-
-            <div className="three columns header-col">
-               <h1><span>Education</span></h1>
-            </div>
-
-            <div className="nine columns main-col">
-              {
-                resumeData.education && resumeData.education.map((item)=>{
-                  return(
-                    <div className="row item">
-                       <div className="twelve columns">
-                          <h3>{item.UniversityName}</h3>
-                          <p className="info">
-                          {item.specialization}
-                          <span>&bull;</span> <em className="date">{item.MonthOfPassing} {item.YearOfPassing}</em></p>
-                          <p>
-                          {item.Achievements}
-                          </p>
-                       </div>
+      <section id="experience" className="section">
+        <div className="wrap">
+          <p className="eyebrow">Experience</p>
+          <h2>Work</h2>
+          <div className="experience-layout">
+          {
+            resumeData.work && resumeData.work.map(function (item) {
+              return (
+                <article className="card job" key={item.CompanyName}>
+                  <div className="job-head">
+                    <img src={item.CompanyLogo} alt="" width="48" height="48" />
+                    <div>
+                      <h3>{item.CompanyName}</h3>
+                      <p className="meta">
+                        {item.specialization}
+                        <span aria-hidden="true"> · </span>
+                        <span>{item.MonthStarted} – {item.YearOfLeaving}</span>
+                      </p>
                     </div>
-                  )
+                  </div>
+                  <ul className="achievements">
+                    {
+                      item.Achievements.map(function (achievement) {
+                        return <li key={achievement}>{achievement}</li>;
+                      })
+                    }
+                  </ul>
+                </article>
+              );
+            })
+          }
+          <aside className="card skills-card">
+            <h3>Skills</h3>
+            <ul className="chips">
+              {
+                resumeData.skills && resumeData.skills.map(function (item) {
+                  return <li key={item}>{item}</li>;
                 })
               }
-            </div>
-         </div> */}
-        <div className="row work">
-            <div className="three columns header-col">
-               <h1><span>Work</span></h1>
-            </div>
-
-            <div className="nine columns main-col">
-              {
-                resumeData.work && resumeData.work.map((item) => {
-                  return(
-                    <div className="row item">
-                       <div className="twelve columns">
-                          <div style={{display: "inline-flex"}}>
-                              <h3 className="companyNameAndLogo">{item.CompanyName}</h3>
-                              <img style={{width: '50px', height: '50px'}}src={item.CompanyLogo} />
-                          </div>
-                          <p className="info">
-                          {item.specialization}
-                          <span>&bull;</span> <em className="date">{item.MonthStarted} {item.YearOfLeaving}</em></p>
-                          {item.Achievements.map((achievement) => {
-                              return (
-                                <li>{achievement}</li>
-                              )
-                          })}
-                       </div>
-
-                    </div>
-
-                  )
-                })
-              }
-            </div> 
-         </div>
-
-
-         <div className="row skill">
-
-            <div className="three columns header-col">
-               <h1><span>Skills</span></h1>
-            </div>
-
-            <div className="nine columns main-col">
-
-               <p>
-               {resumeData.skillsDescription}
-               </p>
-
-   				<div id ="skills">
-
-   				   <ul className="heading">
-                {
-                  resumeData.skills && resumeData.skills.map((item) => {
-                    return(
-                      <li>
-                        {item}
-                      </li>
-                    )
-                  })
-                }
-
-   					</ul>
-
-   				</div>
-
-   			</div>
-
-         </div>
-
+            </ul>
+          </aside>
+          </div>
+        </div>
       </section>
     );
   }
